@@ -1,0 +1,54 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block extrastyle %}{% static "css/home.css" %}{% endblock %}
+
+{% block content %}
+
+<div class="home" >
+    <div class="row" style="display: flex; justify-content: center; flex: nowrap; margin: auto;">
+        <div class="cor-sm-4" style="display:inline-block;">
+            <div class="my-pro well" style="display:inline-block;">
+                <h2>About Me</h2>
+                <h3>here any text</h3>
+                <div class="fakeImg">Fake Image</div>
+                <p>this is my blog</p>
+                <p>some Link</p>
+            </div>
+            <div class="bImg">이미지는 이곳에</div>
+        </div>
+        <div class="col-sm-8"  style="display:inline-block;">
+            <div class="bimgTable" style="display: inline-block; justify-content: center;">
+                <!--<img class="bimg" style="width: auto; height: auto; max-width: 900px;" src="{% static 'image/flamingo.jpg' %}" alt="flamingo">-->
+            </div>
+            <hr class="d-sm-none">
+            <div class="home-posts">
+                <h2 class="postText"><a href="{% url 'blog:blog_list' %}">more post</a></h2>
+                <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th class="idTh">ID</th>
+                    <th class="dateTh">DATE</th>
+                    <th>TITLE</th>
+                    <th class="writerTh">WRITER</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for post in posts %}
+                <tr>
+                    <td class="tdText">{{ post.id }}</td>
+                    <td class="tdText"><small>{{ post.created_date|date:'Y-m-d H:i'}}</small></td>
+                    <td class="tdTitle"><a href="{% url 'blog:blog_detail' pk=post.pk %}">{{ post.title }}</a></td>
+                    <td class="tdText">{{ post.author }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+

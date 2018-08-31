@@ -1,0 +1,36 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block extrastyle %}{% static "css/list.css" %}{% endblock %}
+
+{% block content %}
+<div class="myList">
+    <div class="listCont">
+        <p class="freePost"><strong>자유게시판</strong></p>
+        <p class="childText">마음껏 이용해주세요.</p>
+        <hr class="d-sm-none">
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="idTh">ID</th>
+                <th class="dateTh">DATE</th>
+                <th>TITLE</th>
+                <th class="writerTh">WRITER</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for post in posts %}
+            <tr>
+                <td class="tdText">{{ post.id }}</td>
+                <td class="tdText"><small>{{ post.created_date|date:'Y-m-d H:i'}}</small></td>
+                <td class="tdTitle"><a href="{% url 'blog:blog_detail' pk=post.pk %}">{{ post.title }}</a></td>
+                <td class="tdText">{{ post.author }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <p class="plus-post"><a href="{% url 'blog:blog_new' %}" class="glyphicon glyphicon-plus"></a></p>
+    </div>
+</div>
+{% endblock %}

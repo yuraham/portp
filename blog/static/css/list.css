@@ -1,0 +1,48 @@
+.myList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: nowrap;
+}
+.listCont {
+    width: 100%;
+    margin: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+table thead th {
+    text-align: center;
+}
+.freePost {
+    font-size: 2em;
+    display:flax;
+    padding: 10px;
+    padding-left: 30px;
+    padding-bottom:0;
+    margin:0;
+}
+.childText {
+    padding:30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom:5px;
+}
+.idTh {
+    width: 5%;
+}
+.dateTh {
+    width: 15%;
+}
+.writerTh {
+    width: 10%;
+}
+.tdText {
+    text-align: center;
+}
+.plus-post {
+    text-align: right;
+    padding-right: 30px;
+}
+.tdTitle {
+    padding-left: 20px;
+}

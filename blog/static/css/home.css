@@ -1,0 +1,31 @@
+
+table thead th {
+    text-align: center;
+}
+.postText{
+    text-align:right;
+    display:flax;
+    padding: 10px;
+    padding-left: 30px;
+    padding-bottom:0;
+    margin:0;
+}
+.idTh {
+    width: 5%;
+}
+.dateTh {
+    width: 15%;
+}
+.writerTh {
+    width: 10%;
+}
+.tdText {
+    text-align: center;
+}
+.plus-post {
+    text-align: right;
+    padding-right: 30px;
+}
+.tdTitle {
+    padding-left: 20px;
+}

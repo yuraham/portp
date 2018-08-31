@@ -1,0 +1,66 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gugi|Nanum+Gothic&amp;subset=korean">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}?var=20180829">
+    <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}">
+    <title>PORTFOLIO</title>
+</head>
+<body style="margin:0;">
+<div class="body" style="min-height: calc(100vh - 50px)">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="top-login">
+            {% if user.is_authenticated %}
+            <p>Hello {{ user.username }} (<a href="{% url 'logout' %}">Logout</a>)</p>
+            {% else %}
+            <a href="{% url 'login' %}"><span class="glyphicon glyphicon-lock"></span></a>
+            {% endif %}
+        </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'blog:blog_home' %}">Home</a></li>
+                    <li><a href="{% url 'blog:blog_list' %}">PostList</a></li>
+                    <li><a href="{% url 'blog:blog_timer' %}">Timer</a></li>
+                    <li><a href="{% url 'blog:blog_canvas' %}">Canvas</a></li>
+                    <li><a href="{% url 'blog:blog_image' %}">ImageZoom</a></li>
+                    <!--<li><a href="{% url 'blog:blog_game' %}">Game</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="jumbotron header text-center">
+    <h1>PORTFOLIO</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="blog-body">
+        {% block content %}
+        {% endblock %}
+
+        {% block scripts %}
+        {% endblock %}
+    </div>
+</div>
+</div>
+<footer class="footer-fixed-bottom text-center" style="height: 50px; background-color: #f0f0f0; padding-top:10px;">
+    <p style="margin:0;"><strong></strong></p>
+</footer>
+
+</body>
+</html>

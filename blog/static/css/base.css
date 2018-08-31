@@ -1,0 +1,25 @@
+body * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Nanum Gothic';
+}
+.navbar {
+    display:inline-block;
+}
+.top-login {
+    display:inline-block; margin-top: 14px;
+}
+.navbar-header {
+    display:inline-block;
+    float:right;
+}
+.navbar-toggle {
+    margin-top: 14px;
+}
+.header {
+    padding-top: 85px;
+    margin-bottom : 15px;
+    font-family: 'Gugi';
+}

@@ -1,0 +1,94 @@
+    #heremyCanvas {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        height: 600px;
+        flex-wrap: wrap;
+        position: relative;
+        margin: 0;
+
+    }
+    .childHeremy{
+        width: 880px;
+    }
+    #myCanvas {
+        border: 1px solid black;
+    }
+    .canvasTop {
+        font-size: 2em;
+        text-align: center;
+        margin: 5px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+        width: 880px;
+    }
+    #myCanvas{
+        border: 1px solid black;
+        margin: 8px;
+        margin-top: 0;
+        margin-left: 0;
+        float: left;
+    }
+    .canvasBtn{
+        display: inline-block;
+        width: 156px;
+    }
+    .myBtn{
+        margin-bottom : 5.5px;
+        border: none;
+        text-align: center;
+        padding: 9px 15px;
+        color: #d9d9d9;
+        background-color: #1c171a;
+        width: 156px;
+    }
+    #brushColor {
+        margin-top: 3px;
+    }
+    #brushBtndiv {
+        margin-top: 28px;
+    }
+    .btnn{
+        display: inline-block;
+        margin-bottom: 6px;
+        border: none;
+        text-align: center;
+        padding: 5px 13px;
+        color: #d9d9d9;
+        background-color: #1c171a;
+    }
+    #thisC {
+        display: inline-block;
+        width: 156px;
+        height: 30px;
+        margin-top: 5px;
+        margin-bottom: 8px;
+        background-color: black;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .colorful p{
+        margin: 0;
+    }
+    .colorful {
+        display: inline-block;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 156px;
+        margin: 0;
+    }
+    #eText {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 156px;
+        margin: 0;
+        margin-top: 13px;
+    }
+    #eText p {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding:0
+    }

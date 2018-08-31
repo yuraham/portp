@@ -1,0 +1,74 @@
+/* 시계 */
+.clockTime{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+.clockBox {
+    margin: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 573px;
+    flex-wrap: wrap;
+}
+.introdu {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.clockBox button {
+    margin : 9px 4px;
+    margin-bottom: 20px;
+    border: none;
+    text-align: center;
+    padding: 5px 15px;
+    padding-bottom: 9px;
+    color: #ff949b;
+    background-color: #1c171a;
+}
+.clockInfoDiv {
+    margin-bottom: 1px;
+    text-align: center;
+    font-size: 14px;
+}
+.timeText{
+    border: 1px solid black;
+    background-color: #fff;
+    margin:30px;
+    overflow:auto;
+    height: 573px;
+    width:auto;
+    max-width: 700px;
+    margin-left:0;
+}
+.explClock{
+    margin: 20px;
+}
+.explP{
+    padding-top: 20px;
+    font-size:20px;
+}
+.inexplText{
+    padding-left: 20px;
+}
+.explText{
+    padding-left: 20px;
+}
+.hardText{
+    margin-top: 40px;
+}
+.innerP{
+    padding:13px;
+}
+.firP{
+    padding-bottom: 0;
+    padding-top:26px;
+}
+.lasP{
+    padding-bottom: 26px;
+}

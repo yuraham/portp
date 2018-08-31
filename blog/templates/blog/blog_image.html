@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block extrastyle %}{% static "css/image.css" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <p class="imgZoom"><strong>Image Zoom</strong></p>
+    <p class="childText">이미지 파일을 불러와 확대해 볼 수 있는 곳입니다.</p>
+    <hr class="d-sm-none">
+    <div id="totalImg">
+        <label for="imgInput" class="inputLabel">Image Upload</label>
+        <input id="imgInput" type="file" accept=".png, .jpg, .jpeg">
+        <div class="imgdiv">
+            <img id="thisImg">
+        </div>
+        <div class="zoomBox">
+            <canvas id="imgCanvas" width="350" height="300"></canvas>
+            <p id="coordi"></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/image.js' %}"></script>
+{% endblock %}
