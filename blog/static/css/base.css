@@ -20,6 +20,7 @@ body * {
 }
 .header {
     padding-top: 85px;
-    margin-bottom : 15px;
+    padding-bottom: 25px;
+    margin-bottom : 13px;
     font-family: 'Gugi';
 }
