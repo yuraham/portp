@@ -3,7 +3,9 @@
     justify-content: center;
     flex-direction: column;
     flex: nowrap;
-    width: 100%;
+    width: 86%;
+    margin-left: 6%;
+    margin-right: 8%;
 }
 .listCont {
     width: 100%;
