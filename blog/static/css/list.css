@@ -3,12 +3,11 @@
     justify-content: center;
     flex-direction: column;
     flex: nowrap;
+    width: 100%;
 }
 .listCont {
     width: 100%;
     margin: 0;
-    padding-left: 100px;
-    padding-right: 100px;
 }
 table thead th {
     text-align: center;

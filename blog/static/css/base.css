@@ -24,3 +24,18 @@ body * {
     margin-bottom : 13px;
     font-family: 'Gugi';
 }
+.blog-body{
+    height: 100%;
+}
+.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: #EEEEEE;
+}
+.footer p {
+    padding-top: 10px;
+    text-align: center;
+}
