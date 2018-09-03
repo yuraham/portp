@@ -61,3 +61,43 @@ input[type="file"]{
     margin-top: 15px;
     font-size: 26px;
 }
+
+.imageText{
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    justify-content: center;
+    margin:10px;
+    width: 100%;
+}
+.explImage{
+    border: 1px solid black;
+    padding: 20px;
+    height: 300px;
+    width: 700px;
+    overflow:auto;
+    margin: 20px;
+}
+.explP{
+    padding-top: 20px;
+    font-size:20px;
+}
+.inexplText{
+    padding-left: 20px;
+}
+.explText{
+    padding-left: 20px;
+}
+.hardText{
+    margin-top: 40px;
+}
+.innerP{
+    padding:13px;
+}
+.firP{
+    padding-bottom: 0;
+    padding-top:26px;
+}
+.lasP{
+    padding-bottom: 26px;
+}

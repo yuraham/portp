@@ -20,6 +20,39 @@
         </div>
     </div>
 </div>
+<div>
+    <div class="imageText">
+        <div class="explImage">
+            <p class="explP"><strong>사용법</strong></p>
+            <div id="explText">
+                <p><strong>1. 이미지를 불러와 미리볼 수 있습니다.</strong></p>
+                <p><strong>2. 불러온 이미지 클릭시 오른쪽 캔버스에 확대된 모습을 볼 수 있습니다.</strong></p>
+                <p><strong>3. coodinates를 통해 자신이 어디를 클릭했는지 알 수 있습니다.</strong></p>
+                <div class="hardText">
+                    <button type="button" class="btn" data-toggle="collapse" data-target="#innerHard">진행하며 어려웠던 점</button>
+                    <div id="innerHard" class="collapse">
+                        <p class="innerP firP">이미지 확대는 전부터 관심이 있었습니다. 이미지 파일을 올리고, 그걸 가져다 확대시켜 본다는 게 아직 개발 극초보였던 저에게는 엄청 신선하게 다가왔습니다.
+                            차근차근 인풋을 배우고, 이벤트를 배우다보니 어렴풋이 어떻게 진행해야 할 지 머릿속으로 그려졌습니다.
+                        </p>
+
+                        <p class="innerP">
+                            실제로 진행할 때 제일 버벅거렸던 곳은 마우스로 클릭한 곳의 좌표를 확대 화면에 불러오는 곳이었습니다.
+                            처음에 마우스로 클릭한 곳의 좌표와 확대된 곳의 위치가 다르다는 것을 알아차리고, 이걸 어떻게 해결해야 할지 한참을 고민했었습니다. 그리고 알아냈죠.
+                            화면에 띄워주는 이미지의 크기를 정해 놓는다 해도, 실제 마우스로 클릭한 좌표는 오리지널 사이즈로 지정된다는 것을.
+                        </p>
+
+                        <p class="innerP">
+                            그래서 결국 또다시 타이머에서 이용했던 비율을 이용해 해결해 나갔습니다. 한번 경험해 본 공식이다보니 타이머를 했을 때에 비해 그렇게 오래 걸리지는 않았었습니다.
+                            이미지를 다룬다는 게 생각보다 어렵다는 걸 다시금 깨달았고, 그리고 그만큼 재밌다는 것도 깨달은 즐거운 시간이었습니다.
+                        </p>
+
+                        <p class="innerP lasP">-2018.08.31</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block scripts %}
