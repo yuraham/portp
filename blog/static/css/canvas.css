@@ -11,9 +11,6 @@
     .childHeremy{
         width: 880px;
     }
-    #myCanvas {
-        border: 1px solid black;
-    }
     .canvasTop {
         font-size: 2em;
         text-align: center;
@@ -23,7 +20,7 @@
         width: 880px;
     }
     #myCanvas{
-        border: 1px solid black;
+        border: 1px solid #1c171a;
         margin: 8px;
         margin-top: 0;
         margin-left: 0;
@@ -109,7 +106,8 @@
     }
     .explClock{
     display:inline-block;
-    border:1px solid black;
+    border: 2px solid #EEEEEE;
+    border-radius: 4px;
     padding: 20px 60px;
     padding-top: 40px;
     width:auto;

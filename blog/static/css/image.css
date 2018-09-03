@@ -48,7 +48,8 @@ input[type="file"]{
 }
 #thisImg{
     display:inline-block;
-    float:left; margin:10px;
+    float:left;
+    margin:10px;
 }
 .zoomBox{
     text-align:center;
@@ -71,7 +72,8 @@ input[type="file"]{
     width: 100%;
 }
 .explImage{
-    border: 1px solid black;
+    border: 2px solid #EEEEEE;
+    border-radius: 4px;
     padding: 20px;
     height: 300px;
     width: 700px;
