@@ -1,0 +1,13 @@
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+.postText {
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+.save{
+    position: absolute;
+    right: 8%;
+    margin:30px;
+    width: 100px;
+}

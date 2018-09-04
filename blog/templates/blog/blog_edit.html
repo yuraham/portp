@@ -1,4 +1,7 @@
 {% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block extrastyle %}{% static "css/edit.css" %}{% endblock %}
 
 {% block content %}
 
@@ -8,14 +11,15 @@
     </div>
     <form method="post" class="post-form">
         {% csrf_token %}
-        Title:
-        {{ form.title }}
-        Author:
-        {{ form.author }}
-        Text:
-        {{ form.text }}
-        <button class="btn myBtn" style="align: right;" type="submit" class="save btn btn-default">Save</button>
+        <div class="container">
+            <p class="postText"><strong>Title:</strong></p>
+            {{ form.title }}
+            <p class="postText"><strong>Author:</strong></p>
+            {{ form.author }}
+            <p class="postText"><strong>Text:</strong></p>
+            {{ form.text }}
+            <button class="btn save" type="submit"><strong>Save</strong></button>
+        </div>
     </form>
 </div>
-
 {% endblock %}
