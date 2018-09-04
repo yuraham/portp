@@ -11,6 +11,5 @@ urlpatterns = [
  url(r'^blog/timer', views.blog_timer, name="blog_timer"),
  url(r'^blog/canvas$', views.blog_canvas, name="blog_canvas"),
  url(r'^blog/image', views.blog_image, name="blog_image"),
- url(r'^blog/(?P<pk>\d+)/ilist', views.blog_ilist, name="blog_ilist"),
  url(r'^blog/(?P<pk>\d+)/remove', views.blog_remove, name="blog_remove"),
 ]

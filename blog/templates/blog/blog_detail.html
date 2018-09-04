@@ -13,6 +13,5 @@
         <a class="btn btn-lg" href="{% url 'blog:blog_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         <a class="btn btn-lg" href="{% url 'blog:blog_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
     {% endif %}
-    <a class="btn btn-lg" href="{% url 'blog:blog_image' pk=post.pk %}"><span class="glyphicon glyphicon-zoom-in"></span></a>
 </div>
 {% endblock %}

@@ -8,28 +8,14 @@
     </div>
     <form method="post" class="post-form">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+        Title:
+        {{ form.title }}
+        Author:
+        {{ form.author }}
+        Text:
+        {{ form.text }}
+        <button class="btn myBtn" style="align: right;" type="submit" class="save btn btn-default">Save</button>
     </form>
 </div>
 
-<!--<div class="container">-->
-    <!--<form action="/action_page.php">-->
-        <!--<div class="form-group">-->
-            <!--<label for="title">Title : </label>-->
-            <!--<input type="title" class="form-control" id="title">-->
-        <!--</div>-->
-
-        <!--<div class="form-group">-->
-            <!--<label for="author">Writer : </label>-->
-            <!--<input type="author" class="form-control" id="author">-->
-        <!--</div>-->
-
-        <!--<div class="form-group">-->
-            <!--<label for="text">Text : </label>-->
-            <!--<textarea class="form-control" rows="5" id="text"></textarea>-->
-        <!--</div>-->
-        <!--<button type="submit" value="Send" class="btn btn-success" id="submit">Submit</button>-->
-    <!--</form>-->
-<!--</div>-->
 {% endblock %}

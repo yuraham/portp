@@ -63,9 +63,5 @@ def blog_timer(request):
     return render(request, 'blog/blog_timer.html', {})
 
 
-def blog_ilist(request):
-    return render(request, 'blog/blog_ilist.html', {})
-
-
 def blog_image(request):
     return render(request, 'blog/blog_image.html', {})
