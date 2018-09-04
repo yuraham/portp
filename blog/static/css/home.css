@@ -1,23 +1,11 @@
-.home{
-    margin-top: 20px;
-}
-.row {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 86%;
-    margin-left: 7%;
-    margin-right: 7%;
-}
-.cor-sm-2{
-    display:inline-block;
-    justify-content: center;
-    width: 300px;
-    margin-left: 10px;
-    float:left;
-}
 .pal{
     margin-bottom: 10px;
+    min-width: 200px;
+    width: 100%;
+    height: auto;
+}
+.pal2{
+    margin-bottom: 40px;
     min-width: 200px;
     width: 100%;
     height: auto;
@@ -45,15 +33,6 @@
     padding-left: 7px;
     padding-bottom: 5px;
 }
-.col-sm-10{
-    display:inline-block;
-}
-.bimgTable{
-    width: 100%;
-    display: inline-block;
-    justify-content: center;
-    position: relative;
-}
 .bimg{
     display: block;
     margin-left: auto;
@@ -76,7 +55,7 @@ table thead th {
     margin:0;
 }
 .idTh {
-    width: 20px;
+    width: 30px;
 }
 .dateTh {
     width: 120px;
@@ -93,4 +72,7 @@ table thead th {
 }
 .tdTitle {
     padding-left: 20px;
+}
+.updateH{
+    margin:2px; font-size: 16px; text-align: center;
 }

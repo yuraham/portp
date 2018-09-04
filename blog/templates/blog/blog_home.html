@@ -6,68 +6,80 @@
 {% block content %}
 
 <div class="home" >
-    <div class="row">
-        <div class="cor-sm-2">
-            <div class="panel panel-default pal">
-                <div class="panel-heading">
-                    <h2 class="hhead">: About me</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="panel panel-default pal">
+                    <div class="panel-heading">
+                        <h2 class="hhead">: About me</h2>
+                    </div>
+                    <div class="panel-body">
+                        <h4 class="hbody"><strong>"꿈꾸는 미래의 웹개발자"</strong></h4>
+                        <div class="pbody">
+                            <p class="momP"><strong>이름: </strong></p>
+                            <p class="childP">함유라 HamYura</p>
+                            <p class="momP"><strong>웹개발: </strong></p>
+                            <p class="childP">2018.05.24 ~ </p>
+                            <p class="momP"><strong>사용 가능 언어: </strong></p>
+                            <p class="childP">2018.08.31기준<br>html, css, javascript, python, django</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <h4 class="hbody"><strong>"꿈꾸는 미래의 웹개발자"</strong></h4>
-                    <div class="pbody">
-                        <p class="momP"><strong>이름: </strong></p>
-                        <p class="childP">함유라 HamYura</p>
-                        <p class="momP"><strong>웹개발: </strong></p>
-                        <p class="childP">2018.05.24 ~ </p>
-                        <p class="momP"><strong>사용 가능 언어: </strong></p>
-                        <p class="childP">2018.08.31기준<br>html, css, javascript, python, django</p>
+                <div class="panel panel-default pal">
+                    <div class="panel-body">
+                        <div class="pbody">
+                            <p class="momP"><strong>홈페이지 제작 언어: </strong></p>
+                            <p class="childP">Python(Django), HTML, CSS(Bootstrap), JavaScript</p>
+                            <p class="momP"><strong>참고한 곳: </strong></p>
+                            <p class="childP">Djangogirls, w3schools, google search</p>
+                            <p class="momP"><strong>사용 프로프램: </strong></p>
+                            <p class="childP">pycharm community, visual studio code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default pal2">
+                    <div class="panel-heading">
+                        <h2 class="updateH"><strong>업데이트 내역</strong></h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="pbody">
+                            <p class="childP">20180904</p>
+                            <p class="childP"><small>-홈페이지 PostList의 새글쓰기 수정</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default pal">
-                <div class="panel-body">
-                    <div class="pbody">
-                        <p class="momP"><strong>홈페이지 제작 언어: </strong></p>
-                        <p class="childP">Python(Django), HTML, CSS(Bootstrap), JavaScript</p>
-                        <p class="momP"><strong>참고한 곳: </strong></p>
-                        <p class="childP">Djangogirls, w3schools, google search</p>
-                        <p class="momP"><strong>사용 프로프램: </strong></p>
-                        <p class="childP">pycharm community, visual studio code</p>
-                    </div>
+            <div class="col-sm-9" >
+                <div class="bimgTable">
+                    <img class="bimg" src="{% static 'image/flamingo.jpg' %}" alt="flamingo">
                 </div>
-            </div>
-        </div>
-        <div class="col-sm-10" >
-            <div class="bimgTable">
-                <img class="bimg" src="{% static 'image/flamingo.jpg' %}" alt="flamingo">
-            </div>
-            <hr class="d-sm-none" style="margin:10px">
-            <div class="home-posts">
-                <h2 class="postText"><a href="{% url 'blog:blog_list' %}"><strong>more post</strong></a></h2>
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th class="idTh">ID</th>
-                        <th class="dateTh">DATE</th>
-                        <th>TITLE</th>
-                        <th class="writerTh">WRITER</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for post in posts %}
-                    <tr>
-                        <td class="tdText">{{ post.id }}</td>
-                        <td class="tdText"><small>{{ post.created_date|date:'Y-m-d H:i'}}</small></td>
-                        <td class="tdTitle"><a href="{% url 'blog:blog_detail' pk=post.pk %}">{{ post.title }}</a></td>
-                        <td class="tdText">{{ post.author }}</td>
-                    </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
+                <hr class="d-sm-none">
+                <div class="home-posts">
+                    <h2 class="postText"><a href="{% url 'blog:blog_list' %}"><strong>more post</strong></a></h2>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th class="idTh">ID</th>
+                            <th class="dateTh">DATE</th>
+                            <th>TITLE</th>
+                            <th class="writerTh">WRITER</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for post in posts %}
+                        <tr>
+                            <td class="tdText">{{ post.id }}</td>
+                            <td class="tdText"><small>{{ post.created_date|date:'Y-m-d H:i'}}</small></td>
+                            <td class="tdTitle"><a href="{% url 'blog:blog_detail' pk=post.pk %}">{{ post.title }}</a></td>
+                            <td class="tdText">{{ post.author }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 
 {% endblock %}
