@@ -31,6 +31,23 @@
             </tbody>
         </table>
         <p class="plus-post"><a href="{% url 'blog:blog_new' %}" class="glyphicon glyphicon-plus"></a></p>
+
+        <div class="pagination" style="margin-top:10px; margin-bottom: 10px;">
+            <span class="step-links">
+                {% if posts.has_previous %}
+                    <a href="?page={{ posts.previous_page_number }}">뒤로</a>
+                {% endif %}
+
+                <span class="current">
+                    {{ posts.number }} . {{ posts.paginator.num_pages }}
+                </span>
+
+                {% if posts.has_next %}
+                    <a href="?page={{ posts.next_page_number }}">다음</a>
+                {% endif %}
+            </span>
+        </div>
     </div>
+
 </div>
 {% endblock %}

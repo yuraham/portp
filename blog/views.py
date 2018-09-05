@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-# from django.utils import timezone
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from .models import Post
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
@@ -11,7 +11,15 @@ def blog_home(request):
 
 
 def blog_list(request):
-    posts = Post.objects.order_by('id').reverse()
+    contacts = Post.objects.order_by('id').reverse()
+    paginator = Paginator(contacts, 10)
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
     return render(request, 'blog/blog_list.html', {'posts': posts})
 
 
