@@ -1,14 +1,9 @@
 .pal{
-    margin-bottom: 10px;
-    min-width: 200px;
-    width: 100%;
-    height: auto;
+    margin-bottom: 7px;
 }
 .pal2{
+    margin-top: 20px;
     margin-bottom: 40px;
-    min-width: 200px;
-    width: 100%;
-    height: auto;
 }
 .panel-heading{
     background-color: #F8F8F8;
@@ -32,6 +27,11 @@
     margin:0;
     padding-left: 7px;
     padding-bottom: 5px;
+}
+.updateH{
+    margin:2px;
+    font-size: 16px;
+    text-align: center;
 }
 .bimg{
     display: block;
@@ -72,7 +72,4 @@ table thead th {
 }
 .tdTitle {
     padding-left: 20px;
-}
-.updateH{
-    margin:2px; font-size: 16px; text-align: center;
 }
